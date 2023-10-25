@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html,
+body {
+  background-color: #e2e8f0;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("/path/to/your/font-files/Poppins-Regular.woff2") format("woff2");
+  /* Adicione outros formatos de fonte (woff, ttf, etc.) conforme necessário */
+}
+
+/* Adicione estilos globais e outras definições de estilo aqui */
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +40,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
