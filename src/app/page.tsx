@@ -1,5 +1,6 @@
 import About from "./about";
 import Navbar from "./app-sidebar";
+import Experience from "./experience";
 import Hero from "./hero";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
     </main>
   );
 }

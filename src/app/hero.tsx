@@ -1,16 +1,18 @@
 import { Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
+import me from "../../public/jr.png";
+
 const Hero = () => {
   return (
-    <section className="text-center">
-      <div className="flex flex-col lg:flex-row justify-center items-center rounded-full lg:pt-20 pt-20 mb-4">
+    <section className="h-screen flex flex-col justify-center items-center">
+      <div className="flex flex-col lg:flex-row justify-center items-center rounded-full my-2 mx-auto">
         <Image
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           alt="dev-image"
           className="rounded-full"
-          src="https://avatars.githubusercontent.com/u/101297883?v=4"
+          src={me}
         />
         <div className="px-10">
           <p className="text-l py-2 text-gray-500 font-semibold">
@@ -21,19 +23,19 @@ const Hero = () => {
             Desenvolvedor Frontend
           </p>
           <div className="flex">
-            <button className=" p-3 me-3 rounded-full border border-black bg-[#e2e8f0] hover:bg-black hover:text-[#e2e8f0] font-bold flex-1">
+            <button className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white font-bold flex-1">
               Download CV
             </button>
-            <button className="p-3 me-3 rounded-full border text-[#e2e8f0] border-black bg-black hover:bg-[#e2e8f0] hover:text-black font-bold flex-1">
+            <button className="p-3 me-3 rounded-full border text-white border-black bg-black hover:bg-white hover:text-black font-bold flex-1">
               Contato
             </button>
           </div>
 
           <div className="flex pt-3 text-center gap-5 justify-center">
-            <div className="p-3 rounded-full border border-black hover:bg-black hover:text-[#e2e8f0] text-center justify-center">
+            <div className="p-3 rounded-full border border-black hover:bg-black hover:text-white text-center justify-center">
               <Linkedin className=" m-auto fill-white" />
             </div>
-            <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-[#e2e8f0] ">
+            <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-white ">
               <Github className=" m-auto" />
             </div>
           </div>

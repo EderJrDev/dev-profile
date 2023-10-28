@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="max-w-screen-xl text-black py-10 flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl text-black pt-10 flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center">
           <span className="self-center text-4xl whitespace-nowrap">
             Eder Jr

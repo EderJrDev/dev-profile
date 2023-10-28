@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Poppins } from "next/font/google";
+
+const mainFrontFamily = Poppins({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-family-main",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,13 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        suppressHydrationWarning={true}
-        style={{ fontFamily: "Poppins, sans-serif" }}
-      >
-        {children}
-      </body>
+    <html lang="en" className={mainFrontFamily.variable}>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }
