@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Award } from "lucide-react";
 
-import dev from "../../public/dev.png";
+// import dev from "../../public/dev.png";
+import dev from "../../public/coder.jpg";
 
 const About = () => {
   return (
@@ -79,5 +80,3 @@ const About = () => {
 };
 
 export default About;
-
-
