@@ -1,7 +1,6 @@
 import { Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
-// import me from "../../public/jr.png";
 import me from "../../public/code.jpg";
 
 const Hero = () => {

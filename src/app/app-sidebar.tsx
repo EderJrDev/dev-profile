@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "@/components/button";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -9,14 +11,21 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  //   <h2 className="text-4xl sm:text-6xl md:text-9xl text-center text-gray-800">
+  //   LIGHT MODE
+  // </h2>
+  // <h2 className="text-4xl sm:text-6xl md:text-9xl text-center text-white">
+  //   DARK MODE
+  // </h2>
+
   return (
     <nav>
       <div className="max-w-screen-xl text-black pt-10 flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center">
+        <Link href="#" className="flex items-center">
           <span className="self-center text-4xl whitespace-nowrap">
             Eder Jr
           </span>
-        </a>
+        </Link>
         <button
           onClick={toggleMenu}
           type="button"
@@ -47,40 +56,32 @@ const Navbar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 text-black text-3xl rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 md:p-0"
-                aria-current="page"
-              >
+              <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 md:p-0"
-                aria-current="page"
-              >
+              <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
                 Experiencia
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 md:p-0"
-                aria-current="page"
-              >
+              <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
                 Projetos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 md:p-0"
-                aria-current="page"
-              >
+              <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
                 Contato
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
+                Dark Mode
+              </Link>
+            </li>
+            <li>
+              <Button />
             </li>
           </ul>
         </div>
