@@ -23,7 +23,7 @@ const Hero = () => {
             Desenvolvedor Frontend
           </p>
           <div className="flex">
-            <button className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white font-bold flex-1">
+            <button className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1">
               Download CV
             </button>
             <button className="p-3 me-3 rounded-full border text-white border-black bg-black hover:bg-white hover:text-black font-bold flex-1">

@@ -1,3 +1,5 @@
+import { Github, Linkedin } from "lucide-react";
+
 const Footer = () => {
   return (
     <section className="text-center">
@@ -8,6 +10,14 @@ const Footer = () => {
           </p>
           <div>
             <h1 className="font-bold text-4xl pt-3">Contato</h1>
+          </div>
+        </div>
+        <div className="flex pt-3 text-center gap-5 justify-center">
+          <div className="p-3 rounded-full border border-black hover:bg-black hover:text-white text-center justify-center">
+            <Linkedin className=" m-auto fill-white" />
+          </div>
+          <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-white ">
+            <Github className=" m-auto" />
           </div>
         </div>
       </div>

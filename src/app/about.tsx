@@ -34,7 +34,7 @@ const About = () => {
             </div>
             <p className="font-semibold text-xl">Experiência</p>
             <p className="text-gray-400 pt-1">
-              1+ ano Desenvolvimento Frontend/Mobile
+              2+ anos Desenvolvimento Frontend/Mobile
             </p>
           </div>
 
@@ -44,7 +44,7 @@ const About = () => {
             </div>
             <p className="font-semibold text-xl">Educação</p>
             <p className="text-gray-400 pt-1">
-              4º Semestre Engenharia de Software Uni-FACEF
+              5º Semestre Engenharia de Software Uni-FACEF
             </p>
           </div>
         </div>
@@ -55,24 +55,24 @@ const About = () => {
             <span className="font-semibold">tecnologia</span>, especialmente
             pelo mundo fascinante do desenvolvimento Frontend. Para mim,
             transformar linhas de código em interfaces visualmente encantadoras
-            é mais do que um trabalho; é uma paixão que me move diariamente.
+            é mais do que um trabalho é uma paixão que me move diariamente.
             Minha personalidade extrovertida e sonhadora me leva a encontrar
             alegria não apenas na criação, mas também na conexão com os outros.
             Acredito que a tecnologia não é apenas sobre códigos, mas também
-            <span className="font-semibold"> sobre </span> pessoas. Minha
-            ambição suprema é me tornar um Teach Lead Frontend. Quero não apenas
-            aprimorar minhas habilidades, mas também compartilhar meu
+            sobre
+            <span className="font-semibold"> pessoas. </span> Minha ambição
+            suprema é me tornar um Teach Lead Frontend. Quero não apenas
+            aprimorar minhas habilidades, mas também continuar compartilhando
+            meu
             <span className="font-semibold"> conhecimento </span> , inspirando
             outros a explorar o vasto universo do desenvolvimento tecnológico.
             Enxergo um futuro onde minhas contribuições não apenas moldam belas
             interfaces, mas também capacitam e educam uma comunidade inteira,
-            criando um mundo digital mais{" "}
+            criando um mundo digital{" "}
             <span className="font-semibold"> colaborativo </span> e brilhante
             para todos nós.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 pt-5"></div>
       </div>
     </section>
   );

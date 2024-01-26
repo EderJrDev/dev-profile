@@ -11,16 +11,9 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  //   <h2 className="text-4xl sm:text-6xl md:text-9xl text-center text-gray-800">
-  //   LIGHT MODE
-  // </h2>
-  // <h2 className="text-4xl sm:text-6xl md:text-9xl text-center text-white">
-  //   DARK MODE
-  // </h2>
-
   return (
     <nav>
-      <div className="max-w-screen-xl text-black pt-10 flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl text-black dark:text-white pt-10 flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="#" className="flex items-center">
           <span className="self-center text-4xl whitespace-nowrap">
             Eder Jr
@@ -54,7 +47,7 @@ const Navbar = () => {
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 text-black text-3xl rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 text-black dark:text-white text-3xl rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
               <Link href="#" className="block py-2 pl-3 pr-4 md:p-0">
                 Sobre
