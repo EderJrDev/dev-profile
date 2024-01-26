@@ -1,7 +1,8 @@
-import { Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
-import me from "../../public/code.jpg";
+import { Linkedin, Github } from "lucide-react";
+
+import developer from "../../public/profile.png";
 
 const Hero = () => {
   return (
@@ -10,9 +11,10 @@ const Hero = () => {
         <Image
           width={400}
           height={400}
+          priority
           alt="dev-image"
           className="rounded-full"
-          src={me}
+          src={developer}
         />
         <div className="px-10">
           <p className="text-l py-2 text-gray-500 font-semibold">

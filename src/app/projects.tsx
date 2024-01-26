@@ -2,14 +2,13 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import { ArrowRightCircle } from "lucide-react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
 import Image from "next/image";
 
-import restaurant from "../../public/restaurante.png";
 import ecomanager from "../../public/ecomanager.png";
-import { ArrowRightCircle } from "lucide-react";
-import Footer from "./footer";
-// import Footer from "./footer";
+import restaurant from "../../public/restaurante.png";
 
 export default function Projects() {
   const [isElementVisible, setIsElementVisible] = useState(true);
@@ -27,14 +26,9 @@ export default function Projects() {
     };
   }, []); // O segundo argumento vazio assegura que o useEffect só seja executado uma vez (equivalente a componentDidMount)
 
-  const handleCardClick = () => {
-    // Redirecionar para a URL externa quando o card é clicado
-    window.open("https://restaurantedadulci.com.br/", "_blank"); // _blank abre em uma nova aba
-  };
-
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div id="projects" className="min-h-screen flex flex-col">
         <Parallax pages={3.2} style={{ height: "100vh" }}>
           <ParallaxLayer
             offset={0}
@@ -70,7 +64,6 @@ export default function Projects() {
           >
             <div
               className="lg:flex-row border border-black dark:border-white rounded-3xl md:max-w-3xl h-auto w-full sm:w-auto p-5 relative overflow-hidden"
-              onClick={handleCardClick}
               style={{ cursor: "pointer" }}
             >
               <div className="md:flex relative">
@@ -92,7 +85,6 @@ export default function Projects() {
           >
             <div
               className="lg:flex-row border border-black dark:border-white rounded-3xl md:max-w-3xl h-auto w-full sm:w-auto p-5 relative overflow-hidden"
-              onClick={handleCardClick}
               style={{ cursor: "pointer" }}
             >
               <div className="md:flex relative">
@@ -106,7 +98,6 @@ export default function Projects() {
           </ParallaxLayer>
         </Parallax>
       </div>
-      <Footer />
     </>
   );
 }

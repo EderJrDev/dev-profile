@@ -1,8 +1,9 @@
 import About from "./about";
 import Hero from "./hero";
 import Projects from "./projects";
-import Navbar from "./app-sidebar";
 import Experience from "./experience";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Experience />
       <Projects />
+      <Footer />
     </main>
   );
 }

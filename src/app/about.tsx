@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Award } from "lucide-react";
 
-import dev from "../../public/coder.jpg";
+import dev from "../../public/programmer.png";
 
 const About = () => {
   return (
-    <section className="text-center">
+    <section id="about" className="text-center">
       <div className="lg:flex-row sm:flex-col justify-center items-center lg:pt-10  px-10 sm:px-20 lg:px-52 pb-20 lg:pb-48 mb-4">
         <div className="pb-32">
           <p className="font-medium text-2xl md:text-3xl lg:text-4xl text-gray-500 ">
@@ -19,11 +19,11 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 m-auto gap-4">
           <div>
             <Image
-              width={200}
-              height={200}
+              width={400}
+              height={400}
+              priority
               alt="dev-image"
               className="rounded-3xl"
-              layout="responsive"
               src={dev}
             />
           </div>
