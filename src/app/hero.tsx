@@ -6,15 +6,31 @@ import { Linkedin, Github } from "lucide-react";
 
 import developer from "../../public/profile.png";
 
+// import doc from "../../public/Progamador.pdf";
+
 const Hero = () => {
   const enviarEmail = () => {
     window.location.href = "mailto:ederjuninho2003@gmail.com";
   };
 
-  const baixarCV = () => {
-    // Lógica para baixar o arquivo PDF (substitua 'caminho/do/arquivo.pdf' pelo caminho real do seu arquivo)
-    const urlDoArquivoPDF = "../../public/Programador.pdf";
-    window.open(urlDoArquivoPDF, "_blank");
+  // Função para gerar o link de download
+  const downloadPDF = () => {
+    // Caminho para o arquivo PDF na pasta "public"
+    const caminhoPDF = "../../public/Programador.pdf";
+
+    // Cria um link temporário
+    const link = document.createElement("a");
+    link.href = caminhoPDF;
+    link.download = "Programador.pdf";
+
+    // Adiciona o link ao documento
+    document.body.appendChild(link);
+
+    // Simula um clique no link para iniciar o download
+    link.click();
+
+    // Remove o link do documento após o download
+    document.body.removeChild(link);
   };
 
   return (
@@ -37,11 +53,12 @@ const Hero = () => {
             Desenvolvedor Frontend
           </p>
           <div className="flex">
-            <Link href="/caminho/do/arquivo.pdf" passHref legacyBehavior>
-              <div className="p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1">
-                Download CV
-              </div>
-            </Link>
+            <div
+              onClick={downloadPDF}
+              className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1"
+            >
+              Download CV
+            </div>
             <button
               onClick={enviarEmail}
               className="p-3 me-3 rounded-full border text-white border-black bg-black hover:bg-white hover:text-black font-bold flex-1"
