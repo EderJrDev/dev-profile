@@ -16,7 +16,7 @@ const Hero = () => {
   // Função para gerar o link de download
   const downloadPDF = () => {
     // Caminho para o arquivo PDF na pasta "public"
-    const caminhoPDF = "../../public/Programador.pdf";
+    const caminhoPDF = "./Programador.pdf";
 
     // Cria um link temporário
     const link = document.createElement("a");

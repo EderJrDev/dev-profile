@@ -1,14 +1,16 @@
 "use client";
 import * as React from "react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import { ArrowRightCircle } from "lucide-react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import Image from "next/image";
-
 import ecomanager from "../../public/ecomanager.png";
 import restaurant from "../../public/restaurante.png";
+import music from "../../public/music.png";
+import pokemon from "../../public/pokemon.png";
+import Link from "next/link";
 
 export default function Projects() {
   const [isElementVisible, setIsElementVisible] = useState(true);
@@ -29,7 +31,7 @@ export default function Projects() {
   return (
     <>
       <div id="projects" className="min-h-screen flex flex-col">
-        <Parallax pages={3.2} style={{ height: "100vh" }}>
+        <Parallax pages={5.2} style={{ height: "100vh" }}>
           <ParallaxLayer
             offset={0}
             speed={0.5}
@@ -46,7 +48,7 @@ export default function Projects() {
           </ParallaxLayer>
 
           <ParallaxLayer
-            sticky={{ start: 1, end: 3 }}
+            sticky={{ start: 1, end: 5 }}
             className="flex items-center justify-start px-32 "
           >
             {isElementVisible && (
@@ -58,7 +60,7 @@ export default function Projects() {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={1.5}
+            offset={1.0}
             speed={1.5}
             className="flex items-center justify-end px-32"
           >
@@ -79,7 +81,7 @@ export default function Projects() {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={2.5}
+            offset={2.0}
             speed={1.5}
             className="flex items-center justify-end px-32"
           >
@@ -92,6 +94,44 @@ export default function Projects() {
                   alt="ecomanager"
                   className="rounded-lg object-cover w-full md:min-h-64 sm:min-h-96"
                   src={ecomanager}
+                />
+              </div>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={3.0}
+            speed={1.5}
+            className="flex items-center justify-end px-32"
+          >
+            <div
+              className="lg:flex-row border border-black dark:border-white rounded-3xl md:max-w-3xl h-auto w-full sm:w-auto p-5 relative overflow-hidden"
+              style={{ cursor: "pointer" }}
+            >
+              <div className="md:flex relative">
+                <Image
+                  alt="music"
+                  className="rounded-lg object-cover w-full md:min-h-64 sm:min-h-96"
+                  src={music}
+                />
+              </div>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={4.0}
+            speed={1.5}
+            className="flex items-center justify-end px-32"
+          >
+            <div
+              className="lg:flex-row border border-black dark:border-white rounded-3xl md:max-w-3xl h-auto w-full sm:w-auto p-5 relative overflow-hidden"
+              style={{ cursor: "pointer" }}
+            >
+              <div className="md:flex relative">
+                <Image
+                  alt="pokemon"
+                  className="rounded-lg object-cover w-full md:min-h-64 sm:min-h-96"
+                  src={pokemon}
                 />
               </div>
             </div>

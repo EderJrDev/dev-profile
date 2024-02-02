@@ -22,7 +22,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Html</p>
+                <p className="font-semibold text-xl">HTML</p>
                 <p className="text-gray-400 pt-1">Experiência</p>
               </div>
               <div className="text-center justify-center mb-2">
@@ -36,7 +36,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Next</p>
+                <p className="font-semibold text-xl">Next.js</p>
                 <p className="text-gray-400 pt-1">Intermediário</p>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Tailwind</p>
+                <p className="font-semibold text-xl">Tailwind CSS</p>
                 <p className="text-gray-400 pt-1">Experiência</p>
               </div>
               <div className="text-center justify-center mb-2">
@@ -80,7 +80,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Git</p>
+                <p className="font-semibold text-xl">Git & GitHub</p>
                 <p className="text-gray-400 pt-1">Experiência</p>
               </div>
 
@@ -97,7 +97,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Php</p>
+                <p className="font-semibold text-xl">PHP</p>
                 <p className="text-gray-400 pt-1">Básico</p>
               </div>
               <div className="text-center justify-center mb-2">
@@ -111,7 +111,7 @@ const Experience = () => {
                 <div className="flex items-center justify-center mb-2">
                   <BadgeCheck className="h-10 w-10" />
                 </div>
-                <p className="font-semibold text-xl">Github</p>
+                <p className="font-semibold text-xl">React.js</p>
                 <p className="text-gray-400 pt-1">Experiência</p>
               </div>
             </div>
