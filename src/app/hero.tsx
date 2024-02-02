@@ -4,9 +4,7 @@ import Image from "next/image";
 
 import { Linkedin, Github } from "lucide-react";
 
-import developer from "../../public/profile.png";
-
-// import doc from "../../public/Progamador.pdf";
+import developer from "../../public/profile.webp";
 
 const Hero = () => {
   const enviarEmail = () => {
@@ -78,7 +76,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-white ">
-              <Link href="  https://github.com/EderJrDev" target="_blank">
+              <Link href="https://github.com/EderJrDev" target="_blank">
                 {" "}
                 <Github className=" m-auto" />
               </Link>

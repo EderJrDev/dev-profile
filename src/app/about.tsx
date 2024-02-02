@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Award } from "lucide-react";
 
-import dev from "../../public/programmer.png";
+import dev from "../../public/programmer.webp";
 
 const About = () => {
   return (
