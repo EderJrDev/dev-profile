@@ -4,7 +4,7 @@
   src="/public/profile.webp"
   alt="dev"
   title="dev"
-  style="display: inline-block; margin: 0 auto; max-width: 500px">
+  style="display: inline-block; margin: 0 auto; max-width: 100px; height: 100px;">
 
 
 🚀 **Description**
