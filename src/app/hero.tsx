@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,26 +9,6 @@ import developer from "../../public/profile.webp";
 const Hero = () => {
   const enviarEmail = () => {
     window.location.href = "mailto:ederjuninho2003@gmail.com";
-  };
-
-  // Função para gerar o link de download
-  const downloadPDF = () => {
-    // Caminho para o arquivo PDF na pasta "public"
-    const caminhoPDF = "./Programador.pdf";
-
-    // Cria um link temporário
-    const link = document.createElement("a");
-    link.href = caminhoPDF;
-    link.download = "Programador.pdf";
-
-    // Adiciona o link ao documento
-    document.body.appendChild(link);
-
-    // Simula um clique no link para iniciar o download
-    link.click();
-
-    // Remove o link do documento após o download
-    document.body.removeChild(link);
   };
 
   return (
@@ -51,12 +31,11 @@ const Hero = () => {
             Desenvolvedor Frontend
           </p>
           <div className="flex">
-            <div
-              onClick={downloadPDF}
-              className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1"
-            >
-              Download CV
-            </div>
+            <Link className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1" href='https://1drv.ms/b/s!Avc4l4Jd0WB-gbQfB5bZhjHbyP6y7Q?e=FpUqrl' target='_blank'>
+              {/* <div > */}
+                Download CV
+              {/* </div> */}
+            </Link>
             <button
               onClick={enviarEmail}
               className="p-3 me-3 rounded-full border text-white border-black bg-black hover:bg-white hover:text-black font-bold flex-1"
