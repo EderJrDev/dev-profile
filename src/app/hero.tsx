@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -31,10 +31,12 @@ const Hero = () => {
             Desenvolvedor Frontend
           </p>
           <div className="flex">
-            <Link className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1" href='https://1drv.ms/b/s!Avc4l4Jd0WB-gbQfB5bZhjHbyP6y7Q?e=FpUqrl' target='_blank'>
-              {/* <div > */}
-                Download CV
-              {/* </div> */}
+            <Link
+              className=" p-3 me-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:text-black dark:hover:bg-black dark:hover:text-white font-bold flex-1"
+              href="https://1drv.ms/b/s!Avc4l4Jd0WB-gbQfB5bZhjHbyP6y7Q?e=FpUqrl"
+              target="_blank"
+            >
+              Download CV
             </Link>
             <button
               onClick={enviarEmail}
@@ -45,7 +47,7 @@ const Hero = () => {
           </div>
 
           <div className="flex pt-3 text-center gap-5 justify-center">
-            <div className="p-3 rounded-full border border-black hover:bg-black hover:text-white text-center justify-center">
+            <div className="p-3 rounded-full border border-black hover:bg-black hover:text-white hover:border-white text-center justify-center">
               <Link
                 href="https://www.linkedin.com/in/ederjuniordev/"
                 target="_blank"
@@ -54,10 +56,10 @@ const Hero = () => {
                 <Linkedin className=" m-auto fill-white" />
               </Link>
             </div>
-            <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-white ">
+            <div className="p-3 rounded-full border border-black text-center justify-center  hover:bg-black hover:text-white hover:border-white">
               <Link href="https://github.com/EderJrDev" target="_blank">
                 {" "}
-                <Github className=" m-auto" />
+                <Github className="m-auto" />
               </Link>
             </div>
           </div>

@@ -13,7 +13,7 @@ const Experience = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-3 text-center m-auto justify-center border border-black rounded-3xl w-full">
+          <div className="p-3 text-center m-auto justify-center border rounded-3xl w-full">
             <p className=" text-gray-500 text-2xl mb-2">
               Desenvolvimento Frontend
             </p>
@@ -65,7 +65,7 @@ const Experience = () => {
             </div>
           </div>
 
-          <div className="p-3 text-center m-auto justify-center border border-black rounded-3xl w-full">
+          <div className="p-3 text-center m-auto justify-center border rounded-3xl w-full">
             <p className=" text-gray-500 text-2xl mb-2">Tecnologias</p>
             <div className="flex flex-col text-center justify-around gap-3 md:flex-row w-full">
               <div className="text-center justify-center mb-2">
