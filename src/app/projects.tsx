@@ -1,134 +1,88 @@
 "use client";
-import * as React from "react";
-import { useState, useLayoutEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
-import restaurant from "../../public/restaurante.webp";
-import ecomanager from "../../public/ecomanager.webp";
-import music from "../../public/site-roberto-barros.webp";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
-  const [isElementVisible, setIsElementVisible] = useState(true);
+  const imageRef = useRef<HTMLElement[]>([]);
+  const imageContainerRef = useRef();
 
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      setIsElementVisible(window.innerWidth >= 768);
-    };
+  const images = [
+    { src: "/restaurante.webp", alt: "Restaurant", link: "https://restaurantedadulci.com.br/" },
+    { src: "/casal.webp", alt: "Casal", link: "https://eder-sthe-o5ro6ulb2-eder-juniors-projects.vercel.app/" },
+    { src: "/wedding.webp", alt: "Wedding", link: "https://eder-sthe-wedding.vercel.app/" },
+    { src: "/site.webp", alt: "Ecommerce", link: "https://loja-virtual-rose.vercel.app/" },
+    { src: "/auto-mecanica.webp", alt: "Auto Mecanica", link: "https://auto-mechanic-silva.vercel.app/" },
+    { src: "/ecomanager.webp", alt: "Ecomanager", link: "https://frontend-hackathon-2023-komeeoq4m-eder-juniors-projects.vercel.app/" },
+    { src: "/site-roberto-barros.webp", alt: "Music", link: "https://robertobarrosofc.com.br/" },
+  ];
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  useEffect(() => {
+    const imageContainer = imageContainerRef.current;
+
+    if (imageContainer) {
+      gsap.to(imageRef.current, {
+        xPercent: -100 * (images.length - 1), // Move todos os cartões horizontalmente
+        ease: "none",
+        scrollTrigger: {
+          trigger: imageContainer,
+          scrub: 1,
+          end: `+=${(imageContainer as HTMLElement).offsetWidth}`,
+          pin: true,
+        },
+      });
+    }
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      for (const st of ScrollTrigger.getAll()) {
+        st.kill();
+      }
     };
-  }, []);
+  }, [images.length]);
 
   return (
-    <>
-      <div id="projects" className="min-h-screen flex flex-col">
-        <Parallax pages={3.0} horizontal={true} style={{ width: "100vw" }}>
-          <ParallaxLayer
-            offset={0}
-            speed={0.5}
-            className="flex items-center justify-center"
-          >
-            <div className="d-flex">
-              <p className="font-medium text-2xl md:text-3xl lg:text-4xl text-gray-500">
-                Conheça meus{" "}
-                <span className="font-bold text-4xl text-black dark:text-white">
-                  Projetos
-                </span>
-              </p>
+    <main id="projects" className=" w-full overflow-x-hidden">
+      <section className="min-h-screen flex justify-center items-center">
+        <p className="font-medium text-2xl md:text-3xl lg:text-4xl text-gray-500">
+          Discover my{" "}
+          <span className="font-bold text-4xl text-black dark:text-white">
+            Projects
+          </span>
+        </p>
+      </section>
+      <section className="min-h-screen flex items-center" ref={imageContainerRef}>
+        <div className="flex space-x-10 px-10 w-[300vw]">
+          {images.map((image, index) => (
+            <div
+              key={`${image}`}
+              ref={(el) => {
+                if (imageRef.current) {
+                  imageRef.current[index] = el as HTMLElement;
+                }
+              }}
+              className="w-[60vw] height-full flex justify-center items-center shrink-0"
+            >
+              <a
+                href={image.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-3xl overflow-hidden border-2 border-black dark:border-white"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={2000}
+                  height={2000}
+                  className="rounded-lg object-cover"
+                />
+              </a>
             </div>
-          </ParallaxLayer>
-
-          {/* Adicionando a dica de arraste */}
-          <ParallaxLayer
-            offset={0}
-            speed={0.8}
-            className="flex items-center justify-center"
-          >
-            <div className="absolute bottom-10 text-gray-500 text-sm md:text-base">
-              <p>Arraste para o lado 👉</p>
-            </div>
-          </ParallaxLayer>
-
-          {/* Imagens maiores com offsets ajustados */}
-          <ParallaxLayer
-            offset={0.8}
-            speed={0.8}
-            className="flex items-center justify-center"
-          >
-            <a
-              href="https://frontend-hackathon-2023-komeeoq4m-eder-juniors-projects.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="lg:flex-row border border-black dark:border-white rounded-3xl w-full sm:w-auto p-5 relative overflow-hidden">
-                <div className="md:flex relative">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    alt="ecomanager"
-                    className="rounded-lg object-cover w-full h-full"
-                    src={ecomanager}
-                  />
-                </div>
-              </div>
-            </a>
-          </ParallaxLayer>
-
-          <ParallaxLayer
-            offset={1.0}
-            speed={0.8}
-            className="flex items-center justify-center"
-          >
-            <a
-              href="https://restaurantedadulci.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="lg:flex-row border border-black dark:border-white rounded-3xl w-full sm:w-auto p-5 relative overflow-hidden">
-                <div className="md:flex relative">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    alt="restaurant"
-                    className="rounded-lg object-cover w-full h-full"
-                    src={restaurant}
-                  />
-                </div>
-              </div>
-            </a>
-          </ParallaxLayer>
-
-          <ParallaxLayer
-            offset={1.9}
-            speed={0.8}
-            className="flex items-center justify-center"
-          >
-            <a
-              href="https://robertobarrosofc.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="lg:flex-row border border-black dark:border-white rounded-3xl w-full sm:w-auto p-5 relative overflow-hidden">
-                <div className="md:flex relative">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    alt="music"
-                    className="rounded-lg object-cover w-full h-full"
-                    src={music}
-                  />
-                </div>
-              </div>
-            </a>
-          </ParallaxLayer>
-        </Parallax>
-      </div>
-    </>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import "@fontsource/inter/variable.css"; */
+
 ::-webkit-scrollbar {
   width: 0.5em;
   
@@ -14,3 +16,5 @@
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
+

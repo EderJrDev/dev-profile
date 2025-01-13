@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import type React from "react";
+import { useState, useEffect } from "react";
 import Button from "@/components/button";
 
 const Navbar: React.FC = () => {
@@ -31,8 +32,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav>
-      <div className="max-w-screen-xl text-black dark:text-white pt-10 flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="fixed top-0 left-0 w-full backdrop-blur-md text-black dark:text-white z-50">
+      <div className="max-w-screen-xl py-5 flex flex-wrap items-center justify-between mx-auto px-4">
         <div className="flex items-center">
           <span className="self-center text-4xl whitespace-nowrap">
             Eder Jr
@@ -63,24 +64,17 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
         <div
-          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
+          className={`${isOpen ? "block" : "hidden"
+            } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 text-black dark:text-white text-3xl rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 dark:text-white text-black text-3xl rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
               <div
                 className="block py-2 pl-3 pr-4 md:p-0"
                 onClick={() => scrollToSection("about")}
               >
-                Sobre
-              </div>
-            </li>
-            <li>
-              <div
-                className="block py-2 pl-3 pr-4 md:p-0"
-                onClick={() => scrollToSection("experience")}
-              >
-                Experiência
+                About
               </div>
             </li>
             <li>
@@ -88,7 +82,7 @@ const Navbar: React.FC = () => {
                 className="block py-2 pl-3 pr-4 md:p-0"
                 onClick={() => scrollToSection("projects")}
               >
-                Projetos
+                Projects
               </div>
             </li>
             <li>
@@ -96,7 +90,7 @@ const Navbar: React.FC = () => {
                 className="block py-2 pl-3 pr-4 md:p-0"
                 onClick={() => scrollToSection("contact")}
               >
-                Contato
+                Contact
               </div>
             </li>
 
@@ -109,6 +103,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
+
   );
 };
 

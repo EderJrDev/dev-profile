@@ -16,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={mainFrontFamily.variable}>
-      <body suppressHydrationWarning={true}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+      <body
+        suppressHydrationWarning={true}
+        className="bg-white text-black dark:bg-black dark:text-white"
+      >
+        <ThemeProvider defaultTheme="dark" attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );

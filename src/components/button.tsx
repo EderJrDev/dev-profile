@@ -8,8 +8,9 @@ const Button = () => {
 
   return (
     <button
+      type="button"
       onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
-      className="relative rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-100 text-black dark:text-white px-8 py-2 text-2xl"
+      className="relative rounded-full hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white transition-all duration-100 text-black dark:bg-black dark:text-white px-8 py-2 text-2xl"
     >
       {theme === "dark" ? <MoonStar /> : <Sun />}
     </button>
