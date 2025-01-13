@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const imageRef = useRef<HTMLElement[]>([]);
-  const imageContainerRef = useRef();
+  const imageContainerRef = useRef<HTMLDivElement>(null);
 
   const images = [
     { src: "/restaurante.webp", alt: "Restaurant", link: "https://restaurantedadulci.com.br/" },
@@ -25,12 +25,12 @@ export default function Projects() {
 
     if (imageContainer) {
       gsap.to(imageRef.current, {
-        xPercent: -100 * (images.length - 1), // Move todos os cartões horizontalmente
+        xPercent: -100 * (images.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: imageContainer,
           scrub: 1,
-          end: `+=${(imageContainer as HTMLElement).offsetWidth}`,
+          end: `+=${imageContainer.offsetWidth}`,
           pin: true,
         },
       });
@@ -41,7 +41,7 @@ export default function Projects() {
         st.kill();
       }
     };
-  }, [images.length]);
+  }, []);
 
   return (
     <main id="projects" className=" w-full overflow-x-hidden">
@@ -57,7 +57,7 @@ export default function Projects() {
         <div className="flex space-x-10 px-10 w-[300vw]">
           {images.map((image, index) => (
             <div
-              key={`${image}`}
+              key={`${image.src}-${image.alt}`}
               ref={(el) => {
                 if (imageRef.current) {
                   imageRef.current[index] = el as HTMLElement;
