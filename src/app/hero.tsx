@@ -3,11 +3,35 @@ import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Github } from "lucide-react";
 import developer from "../../public/profile.webp";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import TextPlugin from "gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 
 const Hero = () => {
   const sendEmail = () => {
     window.location.href = "mailto:ederjuninho2003@gmail.com";
   };
+
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Text animation loop
+      const texts = ["Hello, I am", "Eder Jr", "Software Engineer"];
+      const elements = textRef.current?.querySelectorAll(".text-animate");
+
+      if (elements) {
+        gsap.timeline({ repeat: -1 })
+          .to(elements[0], { text: texts[0], duration: 1.5, ease: "power1.inOut" })
+          .to(elements[1], { text: texts[1], duration: 1.5, ease: "power1.inOut", delay: 0.2 })
+          .to(elements[2], { text: texts[2], duration: 1.5, ease: "power1.inOut", delay: 0.2 });
+      }
+    }, textRef);
+
+    return () => ctx.revert(); // Cleanup on component unmount
+  }, []);
 
   return (
     <div>
@@ -25,15 +49,11 @@ const Hero = () => {
             />
           </div>
           <div className="px-4 md:px-10 text-center lg:text-left">
-            <p className="hero-text text-lg md:text-xl py-2 text-gray-500 font-semibold">
-              Hello, I am
-            </p>
-            <h1 className="hero-text font-bold py-3 text-4xl md:text-6xl lg:text-7xl">
-              Eder Jr
-            </h1>
-            <p className="hero-text font-semibold text-gray-500 py-3 text-lg md:text-2xl lg:text-3xl">
-              Software Engineer
-            </p>
+            <div className="min-h-[200px]" ref={textRef}>
+              <p className="hero-text text-lg md:text-xl py-2 text-gray-500 font-semibold text-animate"></p>
+              <h1 className="hero-text font-bold py-3 text-4xl md:text-6xl lg:text-7xl text-animate"></h1>
+              <p className="hero-text font-semibold text-gray-500 py-3 text-lg md:text-2xl lg:text-3xl text-animate"></p>
+            </div>
             <div className="flex flex-col lg:flex-row gap-4 pt-5">
               <Link
                 className="hero-button px-6 py-3 rounded-full border border-black bg-white hover:bg-black hover:text-white dark:border-white dark:bg-black dark:hover:bg-white dark:hover:text-black font-bold transition duration-300"

@@ -63,10 +63,10 @@ const Presentation = () => {
 
       {/* Responsive Text */}
       <h1 className="text-black dark:text-white intro-text font-extrabold glow-title z-10 flex flex-col items-center">
-        <span className="text-giant text-[4.0rem] md:text-[5rem] lg:text-[10rem] xl:text-[12rem] leading-none">
+        <span className="text-giant text-[3.5rem] md:text-[5rem] lg:text-[10rem] xl:text-[12rem] leading-none">
           Software
         </span>
-        <span className="changing-text text-giant text-[4.0rem] md:text-[4rem] lg:text-[8rem] xl:text-[10rem]">
+        <span className="changing-text text-giant text-[3.5rem] md:text-[4rem] lg:text-[8rem] xl:text-[10rem]">
           Engineer
         </span>
       </h1>
