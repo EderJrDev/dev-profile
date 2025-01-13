@@ -15,6 +15,7 @@ My portfolio, made using modern technologies, features a minimalist and beautifu
 - Next
 - TailwindCSS
 - TypeScript
+- GSAP
 
 # 📬 Contact
 If you have any questions or suggestions about the project, feel free to get in touch.
